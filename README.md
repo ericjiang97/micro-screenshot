@@ -12,6 +12,16 @@ Current Base URL: [https://micro-screenshot-urdkmmbbfl.now.sh](https://micro-scr
 |--------|----------|---------------------|
 | site   | _String_ | The site to capture |
 
+
+# Response
+The following response is recieved
+
+```
+{
+  "url": "http://i.imgur.com/xZEO3Zt.png"
+}
+```
+
 # Contributing
 * Fork this repo to your account
 * `git clone git@github.com:<your-account-name>/micro-screenshot.git`
