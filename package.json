@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/lorderikir/micro-screenshot#readme",
   "dependencies": {
-    "fs": "0.0.1-security",
+    "fs": "^0.0.1-security",
     "imgur-uploader": "^4.2.0",
     "micro": "^7.3.3",
     "micro-api": "^0.2.0",

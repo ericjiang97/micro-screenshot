@@ -1,10 +1,12 @@
 # micro-screenshot
 A Microservice for Taking Screenshots
 
-Thanks to @hugomd for fixing a bug!!! :smile:
+Thanks to [https://github.com/hugomd/](@hugomd) for fixing a bug!!! :smile:
+
+Current Base URL: [https://micro-screenshot-urdkmmbbfl.now.sh](https://micro-screenshot-urdkmmbbfl.now.sh)
 
 # How to Use
-`GET localhost:3000/take/` with the following header(s):
+`GET base-url:3000/take/` with the following header(s):
 
 | Header | Type     | Description         |
 |--------|----------|---------------------|
@@ -19,4 +21,4 @@ Thanks to @hugomd for fixing a bug!!! :smile:
 * Optional: use emoji in your commits 🔥
 
 # License
-This project is licensed under `MIT`. See `LICENSE` for more information.
+This project is licensed under the `MIT` License. See `LICENSE` for more information.
