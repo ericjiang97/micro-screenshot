@@ -6,24 +6,27 @@ var imgurUploader = require("imgur-uploader");
 
 var nightmare = Nightmare();    
 
+async function generateScreenshot(url) {
+    
+}
 const hello = (req, res) =>{
     var targetSite = req.headers.site
-    var blob = ""
-    nightmare.goto(targetSite).screenshot()
+    nightmare
+        .goto(targetSite)
+        .wait('#app')
+        .viewport(1920, 1060)
+        .screenshot()
         .then(res => {
-            blob = res
+            imgurUploader(res)
+                .then( res => {
+                        console.log(res.link)
+                        send(res, 200, `${res.link}`) 
+                        return res;
+                    })
         })
         .catch(err => {
             console.error(err)
         })
-    console.log(blob)
-    if(blob){
-        imgurUploader(blob)
-                .then( res => {
-                        console.log(res)
-                        send(res, 200, `${res.link}`) 
-                    })
-    }
 }
 
 const notfound = (req, res) =>
