@@ -2,7 +2,8 @@
 A Microservice for Taking Screenshots
 
 # Contributing
-* `git clone git@github.com:lorderikir/micro-screenshot.git`
+* Fork this repo to your account
+* `git clone git@github.com:<your-account-name>/micro-screenshot.git`
 * `npm install`
 * Make your changes
 * Open a pull request and ask for review ✌️
