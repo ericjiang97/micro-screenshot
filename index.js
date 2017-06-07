@@ -13,7 +13,7 @@ const hello = (req, res) =>{
     var targetSite = req.headers.site
     nightmare
         .goto(targetSite)
-        .wait('#app')
+        .wait(3000)
         .viewport(1920, 1060)
         .screenshot()
         .then(res => {
