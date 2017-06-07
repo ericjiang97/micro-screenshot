@@ -1,7 +1,7 @@
 # micro-screenshot
 A Microservice for Taking Screenshots
 
-Thanks to [https://github.com/hugomd/](@hugomd) for fixing a bug!!! :smile:
+Thanks to [@hugomd](https://github.com/hugomd/) for fixing a bug!!! :smile:
 
 Current Base URL: [https://micro-screenshot-urdkmmbbfl.now.sh](https://micro-screenshot-urdkmmbbfl.now.sh)
 
