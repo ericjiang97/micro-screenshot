@@ -6,10 +6,7 @@ var imgurUploader = require("imgur-uploader");
 
 var nightmare = Nightmare();    
 
-async function generateScreenshot(url) {
-    
-}
-const hello = (req, res) =>{
+const takeScreenshot = (req, res) =>{
     var targetSite = req.headers.site
     nightmare
         .goto(targetSite)
@@ -33,5 +30,5 @@ const notfound = (req, res) =>
   send(res, 404, 'Not found route')
 
 module.exports = router(
-  get('/take/', hello)
+  get('/take/', takeScreenshot)
 )
