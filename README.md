@@ -22,6 +22,10 @@ The following response is recieved
 }
 ```
 
+| Attribute | Type     | Description         |
+|-----------|----------|---------------------|
+| url       | _String_ | The Imgur URL       |
+
 # Contributing
 * Fork this repo to your account
 * `git clone git@github.com:<your-account-name>/micro-screenshot.git`
