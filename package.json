@@ -1,0 +1,33 @@
+{
+  "name": "micro-screenshot",
+  "version": "0.0.1",
+  "description": "A Microservce for taking Screenshot s",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorderikir/micro-screenshot.git"
+  },
+  "keywords": [
+    "Screenshot",
+    "Microservice",
+    "Headlessbrowser"
+  ],
+  "author": "lorderikir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lorderikir/micro-screenshot/issues"
+  },
+  "homepage": "https://github.com/lorderikir/micro-screenshot#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "imgur-uploader": "^4.2.0",
+    "micro": "^7.3.3",
+    "micro-api": "^0.2.0",
+    "microrouter": "^2.1.1",
+    "nightmare": "^2.10.0"
+  }
+}
