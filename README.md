@@ -1,6 +1,7 @@
 # micro-screenshot
 A Microservice for Taking Screenshots
 
+## Acknowledgements
 Thanks to [@hugomd](https://github.com/hugomd/) for fixing a bug!!! :smile:
 
 Current Base URL: `Online-Micro Service Currently Unavailable`
@@ -36,3 +37,5 @@ The following response is recieved
 
 # License
 This project is licensed under the `MIT` License. See `LICENSE` for more information.
+
+For commericial uses please contact the original author.
