@@ -13,16 +13,14 @@ const takeScreenshot = (req, res) =>{
         .wait(3000)
         .viewport(1920, 1060)
         .screenshot()
-        .then(res => {
-            imgurUploader(res)
-                .then( res => {
-                        console.log(res.link)
-                        send(res, 200, `${res.link}`) 
-                        return res;
-                    })
+        .then(screen => imgurUploader(screen))
+        .then(screen => {
+            send(res, 200, {"url": screen.link}) 
+            return res;
         })
         .catch(err => {
             console.error(err)
+            send(err, 500, {"error": err})
         })
 }
 

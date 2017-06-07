@@ -1,6 +1,15 @@
 # micro-screenshot
 A Microservice for Taking Screenshots
 
+Thanks to @hugomd for fixing a bug!!! :smile:
+
+# How to Use
+`GET localhost:3000/take/` with the following header(s):
+
+| Header | Type     | Description         |
+|--------|----------|---------------------|
+| site   | _String_ | The site to capture |
+
 # Contributing
 * Fork this repo to your account
 * `git clone git@github.com:<your-account-name>/micro-screenshot.git`
