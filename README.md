@@ -3,7 +3,7 @@ A Microservice for Taking Screenshots
 
 Thanks to [@hugomd](https://github.com/hugomd/) for fixing a bug!!! :smile:
 
-Current Base URL: [https://micro-screenshot-urdkmmbbfl.now.sh](https://micro-screenshot-urdkmmbbfl.now.sh)
+Current Base URL: `Online-Micro Service Currently Unavailable`
 
 # How to Use
 `GET base-url:3000/take/` with the following header(s):
