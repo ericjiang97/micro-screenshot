@@ -12,7 +12,7 @@ const takeScreenshot = (req, res) =>{
         nightmare
             .goto(targetSite)
             .wait(3000)
-            .viewport(1920, 1060)
+            .viewport(1920, 1080)
             .screenshot()
             .then(screen => imgurUploader(screen))
             .then(screen => {
@@ -30,8 +30,8 @@ const takeScreenshot = (req, res) =>{
 
 const customTake = (req, res) =>{
     var targetSite = req.headers.site;
-    var height = req.headers.height;
-    var width = req.headers.width;
+    var height = parseInt(req.headers.height);
+    var width = parseInt(req.headers.width);
     if(targetSite){
         if(height && width){
             nightmare

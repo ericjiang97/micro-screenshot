@@ -7,11 +7,20 @@ Thanks to [@hugomd](https://github.com/hugomd/) for fixing a bug!!! :smile:
 Current Base URL: `Online-Micro Service Currently Unavailable`
 
 # How to Use
-`GET base-url:3000/take/` with the following header(s):
+`GET base-url:3000/take` with the following header(s):
 
-| Header | Type     | Description         |
-|--------|----------|---------------------|
-| site   | _String_ | The site to capture |
+| Header | Type     | Description                         |
+|--------|----------|-------------------------------------|
+| site   | _String_ | **COMPULSORY**: The site to capture |
+
+`GET base-url:3000/customTake` with the following header(s):
+
+| Header   | Type     | Description                                                                      |
+|----------|----------|----------------------------------------------------------------------------------|
+| site     | _String_ | **COMPULSORY**: The site to capture                                              |
+| height   | _String_ | **COMPULSORY**: The width of the screen size (must be an integer in string form) |
+| width    | _String_ | **COMPULSORY**: The heigt of the screen size (must be an integer in string form) |
+
 
 
 # Response
