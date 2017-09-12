@@ -11,7 +11,7 @@ const takeScreenshot = (req, res) =>{
     if(targetSite){
         nightmare
             .goto(targetSite)
-            .wait(3000)
+            .wait(2000)
             .viewport(1920, 1080)
             .screenshot()
             .then(screen => imgurUploader(screen))
@@ -36,7 +36,7 @@ const customTake = (req, res) =>{
         if(height && width){
             nightmare
                 .goto(targetSite)
-                .wait(3000)
+                .wait(2000)
                 .viewport(width, height)
                 .screenshot()
                 .then(screen => imgurUploader(screen))

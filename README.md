@@ -13,6 +13,8 @@ Current Base URL: `Online-Micro Service Currently Unavailable`
 |--------|----------|-------------------------------------|
 | site   | _String_ | **COMPULSORY**: The site to capture |
 
+**NOTE**: This make several seconds as the headless browser needs to wait 2 seconds so that page fully loads.
+
 `GET base-url:3000/customTake` with the following header(s):
 
 | Header   | Type     | Description                                                                      |
@@ -20,8 +22,6 @@ Current Base URL: `Online-Micro Service Currently Unavailable`
 | site     | _String_ | **COMPULSORY**: The site to capture                                              |
 | height   | _String_ | **COMPULSORY**: The width of the screen size (must be an integer in string form) |
 | width    | _String_ | **COMPULSORY**: The heigt of the screen size (must be an integer in string form) |
-
-
 
 # Response
 The following response is recieved
@@ -39,7 +39,8 @@ The following response is recieved
 # Contributing
 * Fork this repo to your account
 * `git clone git@github.com:<your-account-name>/micro-screenshot.git`
-* `npm install`
+* `yarn` to install dependencies
+  - `yarn start` to start the server
 * Make your changes
 * Open a pull request and ask for review ✌️
 * Optional: use emoji in your commits 🔥
