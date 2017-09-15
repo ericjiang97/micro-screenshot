@@ -1,27 +1,26 @@
 # micro-screenshot
 A Microservice for Taking Screenshots
 
-## Acknowledgements
-Thanks to [@hugomd](https://github.com/hugomd/) for fixing a bug!!! :smile:
+## NOTICE: v0.3.0 takes arguments into the body
+
+## Contributors
+
+|<img src="https://avatars3.githubusercontent.com/u/5687681?v=4&s=460" height="96px"/> | <img src="https://avatars1.githubusercontent.com/u/1646536?v=4&s=460" height="96px"> |
+|-|-|
+| [@lorderikir](https://github.com/lorderikir/)| [@hugomd](https://github.com/hugomd/) |
+Thanks to  for fixing a bug!!! :smile:
 
 Current Base URL: `Online-Micro Service Currently Unavailable`
 
 # How to Use
-`GET base-url:3000/take` with the following header(s):
+`POST base-url:3000/take` with the following body(s):
 
-| Header | Type     | Description                         |
-|--------|----------|-------------------------------------|
-| site   | _String_ | **COMPULSORY**: The site to capture |
-
-**NOTE**: This make several seconds as the headless browser needs to wait 2 seconds so that page fully loads.
-
-`GET base-url:3000/customTake` with the following header(s):
-
-| Header   | Type     | Description                                                                      |
-|----------|----------|----------------------------------------------------------------------------------|
-| site     | _String_ | **COMPULSORY**: The site to capture                                              |
-| height   | _String_ | **COMPULSORY**: The width of the screen size (must be an integer in string form) |
-| width    | _String_ | **COMPULSORY**: The heigt of the screen size (must be an integer in string form) |
+| Header   | Type     | Description                               |
+|----------|----------|-------------------------------------------|
+| site     | _String_ | **COMPULSORY**: The site to capture       |
+| height   | _Int_    | **OPTIONAL**: The height in pixels        |
+| width    | _Int_    | **OPTIONAL**: The width in pixels         | 
+| duration | _Int_    | **OPTIONAL**: The duration to wait for    |
 
 # Response
 The following response is recieved
