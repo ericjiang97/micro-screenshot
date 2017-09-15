@@ -8,7 +8,7 @@ A Microservice for Taking Screenshots
 |<img src="https://avatars3.githubusercontent.com/u/5687681?v=4&s=460" height="96px"/> | <img src="https://avatars1.githubusercontent.com/u/1646536?v=4&s=460" height="96px"> |
 |-|-|
 | [@lorderikir](https://github.com/lorderikir/)| [@hugomd](https://github.com/hugomd/) |
-Thanks to  for fixing a bug!!! :smile:
+
 
 Current Base URL: `Online-Micro Service Currently Unavailable`
 
