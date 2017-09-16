@@ -11,7 +11,7 @@ const takeScreenshot = async (req, res) =>{
     var targetSite = body.url
     var height = body.height || null
     var width = body.width || null
-    var duration = body.width || 2000
+    var duration = body.duration || 2000
     console.log(targetSite, height, width)
     if(targetSite){
         if(height && width){
