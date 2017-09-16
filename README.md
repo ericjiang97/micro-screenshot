@@ -1,7 +1,7 @@
 # micro-screenshot
 A Microservice for Taking Screenshots
 
-## NOTICE: v0.3.0 takes arguments into the body
+<b> ATTENTION: v0.3.0 takes arguments into the body </b>
 
 ## Contributors
 
@@ -20,7 +20,7 @@ Current Base URL: `Online-Micro Service Currently Unavailable`
 | site     | _String_ | **COMPULSORY**: The site to capture       |
 | height   | _Int_    | **OPTIONAL**: The height in pixels        |
 | width    | _Int_    | **OPTIONAL**: The width in pixels         | 
-| duration | _Int_    | **OPTIONAL**: The duration to wait for    |
+| duration | _Int_    | **OPTIONAL**: The duration to wait for in ms    |
 
 # Response
 The following response is recieved

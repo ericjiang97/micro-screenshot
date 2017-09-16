@@ -12,8 +12,12 @@ const takeScreenshot = async (req, res) =>{
     var height = body.height || null
     var width = body.width || null
     var duration = body.duration || 2000
-    console.log(targetSite, height, width)
+    var fullPage = body.fullPage || false
     if(targetSite){
+        if(height && width && fullPage){
+            send(err, 400, {"error": "Bad Request"})
+        }
+
         if(height && width){
             nightmare
                 .goto(targetSite)
@@ -33,6 +37,44 @@ const takeScreenshot = async (req, res) =>{
                     console.error(err)
                     send(err, 500, {"error": err})
                 })
+        } else if(fullPage) {
+            nightmare
+                .goto(targetSite)
+                .wait('body')       //wait till body is loaded
+                .evaluate(() =>{
+                    var body = document.querySelector('body');
+                    return { 
+                        height: body.scrollHeight,
+                        width:body.scrollWidth
+                    }
+                })
+                .then(result => {
+                    console.log(result)
+                    nightmare
+                        .goto(targetSite)
+                        .wait('body')       //wait till body is loaded
+                        .viewport(result.scrollheight, result.scrollWidth)
+                        .screenshot()
+                        .then(screen => imgurUploader(screen))
+                        .catch(err => {
+                            console.error(err)
+                            send(err, 500, {"error": err})
+                        })
+                        .then(screen => {
+                            send(res, 200, {"url": screen.link}) 
+                            return res;
+                        })
+                        .catch(err => {
+                            console.error(err)
+                            send(err, 500, {"error": err})
+                        })
+                })
+                .catch(err => {
+                    console.error(err)
+                    send(err, 500, {"error": err})
+                })
+
+                
         } else {
             nightmare
                 .goto(targetSite)
