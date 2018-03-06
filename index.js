@@ -1,18 +1,22 @@
-var { json, send } = require("micro");
-var { router, post, get } = require("microrouter");
-var Nightmare = require("nightmare");
-var fs = require("fs");
-var imgurUploader = require("imgur-uploader");
+const { json, send } = require("micro");
+const { router, post, get } = require("microrouter");
+const Nightmare = require("nightmare");
 
-var nightmare = Nightmare();    
+const Puppeteer = require('puppeteer')
+
+const fs = require("fs");
+const imgurUploader = require("imgur-uploader");
+
+const nightmare = Nightmare();    
+
 
 const takeScreenshot = async (req, res) =>{
     const body = await json(req)
-    var targetSite = body.url
-    var height = body.height || null
-    var width = body.width || null
-    var duration = body.duration || 2000
-    var fullPage = body.fullPage || false
+    const targetSite = body.url
+    const height = body.height || null
+    const width = body.width || null
+    const duration = body.duration || 2000
+    const fullPage = body.fullPage || false
     if(targetSite){
         if(height && width && fullPage){
             send(err, 400, {"error": "Bad Request"})
@@ -42,7 +46,7 @@ const takeScreenshot = async (req, res) =>{
                 .goto(targetSite)
                 .wait('body')       //wait till body is loaded
                 .evaluate(() =>{
-                    var body = document.querySelector('body');
+                    const body = document.querySelector('body');
                     return { 
                         height: body.scrollHeight,
                         width:body.scrollWidth
@@ -96,9 +100,29 @@ const takeScreenshot = async (req, res) =>{
     }
 }
 
+const takeScreenshotV2 = async (req, res) =>{
+    const body = await json(req)
+    const targetSite = body.url
+    const height = body.height || null
+    const width = body.width || null
+    const duration = body.duration || 2000
+    const fullPage = body.fullPage || false
+
+    const browser = await Puppeteer.launch();
+    const page = await browser.newPage();
+
+    await page.goto(targetSite)
+    await page.screenshot()
+            .then(screen => {
+                console.log(screen)
+            })
+        
+}
+
 const notfound = (req, res) =>
   send(res, 404, 'Not found route')
 
 module.exports = router(
-  post('/take', takeScreenshot)
+  post('/take', takeScreenshot),
+  post('/v2/take', takeScreenshotV2)
 )
